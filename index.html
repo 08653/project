@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +7,69 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.jpg" alt="logo" width="150" height="150">
-        <h1>Поиск путешествий</h1>
+        <div>
+            <img src="images/logo.jpg" alt="logo" width="150" height="150">
+            <h1>Поиск путешествий</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="Main"Главная</a></li>
-                <li><a href="About us"О нас</a></li>
-                <li><a href="Services"Услуги</a></li>
-                <li><a href="Blog"Блог</a></li>
-                <li><a href="Contact us"Контакты</a></li>
+                <li><a href="#"Поиск</a></li>
+                <li><a href="#"Маршруты</a></li>
+                <li><a href="#"О нас</a></li>
+                <li><a href="#"Блог</a></li>
+                <li><a href="#"Контакты</a></li>
+                <li><a href="#"Вход/Регистрация</a></li>
             </ul>
         </nav>
-        <a href="login.html">Вход</a>
     </header>
 
     <maih>
-        <section>
-            <h2>Поисковая система</h2>
+        <section id="search">
+            <h1>Найдите свой следующий отдых</h1>
             <form>
-                <label for="destination">Направление:</label>
-                <input type="text" id="destination" name="destination">
-                <label for="date">Дата:</label>
-                <input type="date" id="date" name="date">
-                <label for="passengers">Количество пассажиров:</label>
-                <input type="number" id="passengers" name="passengers" min="1">
+                <label for="destination">Куда хотите поехать?</label>
+                <input type="text" id="destination" placeholder="Назначение">
+                
+                <label for="date">Дата поездки</label>
+                <input type="date" id="start-date">
+                <input type="date" id="end-date">
+
+                <label for="passengers">Количество пассажиров</label>
+                <input type="number" id="passengers" placeholder="Количество пассажиров" min="1">
+                
                 <button type="sybmit">Поиск</button>
             </form>
         </section>
 
-        <section>
-            <h2>Личный кабинет</h2>
-            <p></p>
+        <section id="map">
+            <h2>Интерактивная карта</h2>
+            <div id="map-container">
+                <iframe src="Ссылка на интерактивную карту" width="600" height="450" style="border:0," allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
 
-        <section>
-            <h2>Вдохновение</h2>
+        <section id="filters">
+            <h2>Фильтры результатов</h2>
+            <form>
+                <label for="price-range">Цена:</label>
+                <input type="range" id="price-range" min="0" max="100000" step="1000">
+
+                <label for="rating">Рейтинг:</label>
+                <select id="rating">
+                    <option value="all">Все</option>
+                    <option value="high">4 звезды и выше</option>
+                    <option value="low">3 звезды и ниже</option>
+                </select>
+
+                <label for="accommodation-type">Тип размещения:</label>
+                <select id="accommodation-type">
+                    <option value="all">Все</option>
+                    <option value="hotel">Отель</option>
+                    <option value="hostel">Хостел</option>
+                    <option value="apartment">Апартаменты</option>
+                </select>
+
+                
             <div>
                 <h3>Тематика путешествий</h3>
                 <ul>

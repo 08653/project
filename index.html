@@ -6,26 +6,26 @@
     <title>Сайт бронирования путешествий</title>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="header__logo">
             <img src="logo.jpg" alt="Логотип сайта" width="150" height="150">
-            <h1>Поиск путешествий</h1>
+            <h1 class="header__title">Поиск путешествий</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Поиск</a></li>
-                <li><a href="#">Маршруты</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Вход/Регистрация</a></li>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#">Поиск</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Маршруты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Вход/Регистрация</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Найдите свой следующий отдых</h2>
+    <main class="main">
+        <section class="search">
+            <h2 class="search__title">Найдите свой следующий отдых</h2>
             <form>
                 <label for="destination">Куда хотите поехать?</label>
                 <input type="text" id="destination" placeholder="Назначение">

@@ -26,99 +26,99 @@
     <main class="main">
         <section class="search">
             <h2 class="search__title">Найдите свой следующий отдых</h2>
-            <form>
-                <label for="destination">Куда хотите поехать?</label>
-                <input type="text" id="destination" placeholder="Назначение">
+            <form class="search">
+                <label class="search__label" for="destination">Куда хотите поехать?</label>
+                <input class="search__input" type="text" id="destination" placeholder="Назначение">
                 
-                <label for="date">Дата поездки</label>
-                <input type="date" id="date">
+                <label class="search__label" for="date">Дата поездки</label>
+                <input class="search__input" type="date" id="date">
 
-                <label for="passengers">Количество пассажиров</label>
-                <input type="number" id="passengers" placeholder="Количество пассажиров">
+                <label class="search__label" for="passengers">Количество пассажиров</label>
+                <input class="search__input" type="number" id="passengers" placeholder="Количество пассажиров">
                 
-                <button type="button">Поиск</button>
+                <button class="search__button" type="button">Поиск</button>
             </form>
         </section>
 
-        <section>
-            <h2>Интерактивная карта</h2>
-            <div>
-                <iframe src="Ссылка на интерактивную карту" width="600" height="450" style="border:0," allowfullscreen="" loading="lazy"></iframe>
+        <section class="map">
+            <h2 class="map__title">Интерактивная карта</h2>
+            <div class="map__container">
+                <iframe class="map__iframe" src="Ссылка на интерактивную карту" width="600" height="450" style="border:0," allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
-        <section>
-            <h2>Фильтры результатов</h2>
-            <form>
-                <label for="price-range">Цена:</label>
-                <input type="range" id="price-range" min="0" max="100000" step="1000">
+        <section class="filters">
+            <h2 class="filters__title">Фильтры результатов</h2>
+            <form class="filters__form">
+                <label class="filters__label" for="price-range">Цена:</label>
+                <input class="filters__input" type="range" id="price-range" min="0" max="100000" step="1000">
 
-                <select>
+                <select class="filters__select">
                     <option value="all">Все</option>
                     <option value="high">4 звезды и выше</option>
                     <option value="low">3 звезды и ниже</option>
                 </select>
 
-                <label for="accommodation-type">Тип размещения:</label>
-                <select id="accommodation-type">
+                <label class="filters__label" for="accommodation-type">Тип размещения:</label>
+                <select class="filters__select" id="accommodation-type">
                     <option value="all">Все</option>
                     <option value="hotel">Отель</option>
                     <option value="hostel">Хостел</option>
                     <option value="apartment">Апартаменты</option>
                 </select>
 
-                <button type="button">Применить фильтры</button>
+                <button class="filters__button" type="button">Применить фильтры</button>
             </form>
         </section>
 
-        <section>
-            <h2>Личный кабинет</h2>
-            <p>Ваши избранные варианты, история поиска и планы маршрутов</p>
-            <button>Перейти в кабинет</button>
+        <section class="profile">
+            <h2 class="profile__title">Личный кабинет</h2>
+            <p class="profile__info">Ваши избранные варианты, история поиска и планы маршрутов</p>
+            <button class="profile__button">Перейти в кабинет</button>
         </section>
 
-        <section>
-            <h2>Вдохновение для путешествий</h2>
-            <article>
-                <h3>Экстремальные путешествия</h3>
-                <p>Специализированные туры для искателей острых ощущений</p>
-                <img src="extreme.jpg" alt="Экстремальные путешествия">
-                <button>Узнать больше</button> 
+        <section class="inspiration">
+            <h2 class="inspiration__title">Вдохновение для путешествий</h2>
+            <article class="inspiration__item">
+                <h3 class="inspiration__subtitle">Экстремальные путешествия</h3>
+                <p class="inspiration__description">Специализированные туры для искателей острых ощущений</p>
+                <img class="inspiration__image" src="extreme.jpg" alt="Экстремальные путешествия">
+                <button class="inspiration__button">Узнать больше</button> 
             </article>
-            <article>
-                <h3>Семейный отдых</h3>
-                <p>Лучшие места для отдыха с детьми.</p>
-                <img src="family.jpg" alt="Семейный отдых">
-                <button>Узнать больше</button>
+            <article class="inspiration__item">
+                <h3 class="inspiration__subtitle">Семейный отдых</h3>
+                <p class="inspiration__description">Лучшие места для отдыха с детьми</p>
+                <img class="inspiration__image" src="family.jpg" alt="Семейный отдых">
+                <button class="inspiration__button">Узнать больше</button>
             </article>
-            <article>
-                <h3>Романтические поездки</h3>
-                <p>Незабываемые моменты для влюбленных</p>
-                <img src="romantic.jpg" alt="Романтические поездки">
-                <button>Узнать больше</button>
+            <article class="inspiration__item">
+                <h3 class="inspiration__subtitle">Романтические поездки</h3>
+                <p class="inspiration__description">Незабываемые моменты для влюбленных</p>
+                <img class="inspiration__image" src="romantic.jpg" alt="Романтические поездки">
+                <button class="inspiration__button">Узнать больше</button>
             </article>
         </section>
 
-        <section>
-            <h2>Лучшие предложения</h2>
-            <p>Актуальные акции и скидки на авиабилеты и отели</p>
-            <div>
-                <h3>Скидка 20% на все авиабилеты!</h3>
-                <button>Забронировать сейчас</button>
+        <section class="offers">
+            <h2 class="offers__title">Лучшие предложения</h2>
+            <p class="offers__info">Актуальные акции и скидки на авиабилеты и отели</p>
+            <div class="offers__item">
+                <h3 class="offers__subtitle">Скидка 20% на все авиабилеты!</h3>
+                <button class="offers__button">Забронировать сейчас</button>
             </div>
-            <div>
-                <h3>Специальные предложения на отели</h3>
-                <button>Посмотреть предложения</button>
+            <div class="offers__item">
+                <h3 class="offers__subtitle">Специальные предложения на отели</h3>
+                <button class="offers__button">Посмотреть предложения</button>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>2025 Путешествия. Все права защищены</p>
-        <ul>
-            <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Карта сайта</a></li>
-            <li><a href="#">Контакты</a></li>
+    <footer class="footer">
+        <p class="footer__text">2025 Путешествия. Все права защищены</p>
+        <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Карта сайта</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
         </ul>
     </footer>
 </body>

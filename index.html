@@ -24,7 +24,7 @@
     <main class="main">
         <section class="search">
             <h2 class="search__title">Найдите свой следующий отдых</h2>
-            <form class="search">
+            <form class="search__form">
                 <label class="search__label" for="destination">Куда хотите поехать?</label>
                 <input class="search__input" type="text" id="destination" placeholder="Назначение">
                 
@@ -41,7 +41,7 @@
         <section class="map">
             <h2 class="map__title">Интерактивная карта</h2>
             <div class="map__container">
-                <iframe class="map__iframe" src="Ссылка на интерактивную карту" width="600" height="450" style="border:0," allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1343.0298470153464!2d47.857713366843946!3d56.63303586188808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4159eb46f08d06d9%3A0x19a8bc30ab90eca0!2z0YPQuy4g0JzQsNGI0LjQvdC-0YHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQmdC-0YjQutCw0YAt0J7Qu9CwLCDQoNC10YHQvy4g0JzQsNGA0LjQuSDQrdC7LCA0MjQwMDM!5e0!3m2!1sru!2sru!4v1739379134121!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0," allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
@@ -53,6 +53,7 @@
 
                 <select class="filters__select">
                     <option value="all">Все</option>
+                    <option value="high">5 звёзд</option>
                     <option value="high">4 звезды и выше</option>
                     <option value="low">3 звезды и ниже</option>
                 </select>
@@ -80,19 +81,19 @@
             <article class="inspiration__item">
                 <h3 class="inspiration__subtitle">Экстремальные путешествия</h3>
                 <p class="inspiration__description">Специализированные туры для искателей острых ощущений</p>
-                <img class="inspiration__image" src="images/extreme.jpg" alt="Экстремальные путешествия">
+                <img class="inspiration__image" src="images/extreme.jpg" alt="Экстремальные путешествия" width="600">
                 <button class="inspiration__button">Узнать больше</button> 
             </article>
             <article class="inspiration__item">
                 <h3 class="inspiration__subtitle">Семейный отдых</h3>
                 <p class="inspiration__description">Лучшие места для отдыха с детьми</p>
-                <img class="inspiration__image" src="images/family.jpg" alt="Семейный отдых">
+                <img class="inspiration__image" src="images/family.jpg" alt="Семейный отдых" width="600">
                 <button class="inspiration__button">Узнать больше</button>
             </article>
             <article class="inspiration__item">
                 <h3 class="inspiration__subtitle">Романтические поездки</h3>
                 <p class="inspiration__description">Незабываемые моменты для влюбленных</p>
-                <img class="inspiration__image" src="images/romantic.jpg" alt="Романтические поездки">
+                <img class="inspiration__image" src="images/romantic.jpg" alt="Романтические поездки" width="600">
                 <button class="inspiration__button">Узнать больше</button>
             </article>
         </section>
@@ -108,6 +109,13 @@
                 <h3 class="offers__subtitle">Специальные предложения на отели</h3>
                 <button class="offers__button">Посмотреть предложения</button>
             </div>
+        </section>
+
+        <section class="hotels">
+            <img class="hotels__image" src="images/hotel_room1.jpg" alt="Отели" width="300">
+            <img class="hotels__image" src="images/hotel_room2.jpg" alt="Отели" width="300">
+            <img class="hotels__image" src="images/hotel_room3.jpg" alt="Отели" width="300">
+            <img class="hotels__image" src="images/hotel_room.jpg" alt="Отели" width="300">
         </section>
     </main>
 

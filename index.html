@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт бронирования путешествий</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header container">
             <img class="header__logo" src="logo.jpg" alt="Логотип сайта" width="150" height="150">
             <h1 class="header__title">Поиск путешествий</h1>
         <nav class="header__menu">
@@ -21,20 +23,25 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main class="main container">
         <section class="search">
             <h2 class="search__title">Найдите свой следующий отдых</h2>
             <form class="search__form">
                 <label class="search__label" for="destination">Куда хотите поехать?</label>
-                <input class="search__input" type="text" id="destination" placeholder="Назначение">
-                
+                <select name="city" id="city-select">
+                    <option value="">Выберите город</option>
+                    <option value="petersburg">Санкт-Петербург</option>
+                    <option value="samara">Самара</option>
+                    <option value="perm">Пермь</option>
+                    <option value="novosibirsk">Новосибирск</option>
+                  </select>
                 <label class="search__label" for="date">Дата поездки</label>
                 <input class="search__input" type="date" id="date">
 
                 <label class="search__label" for="passengers">Количество пассажиров</label>
                 <input class="search__input" type="number" id="passengers" placeholder="Количество пассажиров">
                 
-                <button class="search__button" type="button">Поиск</button>
+                <button class="search__button button" type="button">Поиск</button>
             </form>
         </section>
 
@@ -66,14 +73,14 @@
                     <option value="apartment">Апартаменты</option>
                 </select>
 
-                <button class="filters__button" type="button">Применить фильтры</button>
+                <button class="filters__button button" type="button">Применить фильтры</button>
             </form>
         </section>
 
         <section class="profile">
             <h2 class="profile__title">Личный кабинет</h2>
             <p class="profile__info">Ваши избранные варианты, история поиска и планы маршрутов</p>
-            <button class="profile__button">Перейти в кабинет</button>
+            <button class="profile__button button">Перейти в кабинет</button>
         </section>
 
         <section class="inspiration">
@@ -82,19 +89,19 @@
                 <h3 class="inspiration__subtitle">Экстремальные путешествия</h3>
                 <p class="inspiration__description">Специализированные туры для искателей острых ощущений</p>
                 <img class="inspiration__image" src="images/extreme.jpg" alt="Экстремальные путешествия" width="600">
-                <button class="inspiration__button">Узнать больше</button> 
+                <button class="inspiration__button button">Узнать больше</button> 
             </article>
             <article class="inspiration__item">
                 <h3 class="inspiration__subtitle">Семейный отдых</h3>
                 <p class="inspiration__description">Лучшие места для отдыха с детьми</p>
                 <img class="inspiration__image" src="images/family.jpg" alt="Семейный отдых" width="600">
-                <button class="inspiration__button">Узнать больше</button>
+                <button class="inspiration__button button">Узнать больше</button>
             </article>
             <article class="inspiration__item">
                 <h3 class="inspiration__subtitle">Романтические поездки</h3>
                 <p class="inspiration__description">Незабываемые моменты для влюбленных</p>
                 <img class="inspiration__image" src="images/romantic.jpg" alt="Романтические поездки" width="600">
-                <button class="inspiration__button">Узнать больше</button>
+                <button class="inspiration__button button">Узнать больше</button>
             </article>
         </section>
 
@@ -119,7 +126,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer container">
         <p class="footer__text">2025 Путешествия. Все права защищены</p>
         <ul class="footer__list">
             <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>

@@ -1,0 +1,16 @@
+.footer__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__link{
+    text-decoration: none;
+    color: #000;
+}
+
+.footer__link:hover{
+    /* text-decoration:underline; */
+    /* opacity: 0.3; */
+    /* background-color: #af3838; */
+    color: rgb(12, 114, 3);
+}

@@ -1,5 +1,21 @@
+.inspiration__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
 .inspiration__button {
     margin-top: 20px;
-
-
+}
+.hotels{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.hotels__image {
+    border-radius: 30px;
+    transition: transform 0.3s ease-out;
+}
+.hotels__image:hover{
+    transform: scale(1.1);
 }

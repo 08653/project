@@ -1,0 +1,62 @@
+.inspiration__wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.inspiration__image{
+    margin: 0 auto;
+    width: 430px; 
+    height: 280px;
+    object-fit: cover;
+}
+.inspiration__button{
+    margin-top: 20px;
+}
+.hotels{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.hotels__image{
+    border-radius: 30px;
+    transition: transform 0.8s ease-out;
+}
+.hotels__image:hover{
+    transform: scale(1.1);
+}
+.inspiration__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+ box-shadow: 0 8px 16px 0
+rgba(0,0,0,0.2); 
+ transition: transform 0.8s ease-out; 
+}
+.inspiration__item:hover{
+    
+    transform: scale(1.1);
+}
+.inspiration{
+    padding: 20px 0;
+}
+.reviews__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.reviews__item{
+    padding: 40px;
+    width: 410px;
+    border-radius: 20px;
+ box-shadow: 0 8px 16px 0
+rgba(0,0,0,0.2);
+ transition: transform 0.8s ease-out;
+}
+
+.reviews__item:hover{
+    transform: scale(1.1);
+}

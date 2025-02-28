@@ -1,0 +1,62 @@
+@media only screen and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .search {
+        padding: 0 5px;
+    }
+
+    .inspiration__wrapper {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .inspiration__item {
+        width: 450px;
+    }
+
+    .hotels__image {
+        width: 450px;
+    }
+
+    .reviews__list {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .reviews__item {
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .reviews__title {
+        padding: 0 40px;
+    }
+
+    .offers {
+        padding: 0 40px;
+    }
+
+    .filters {
+        padding: 0 40px;
+    }
+    .profile {
+        padding: 0 40px;
+    }
+    .inspiration__title {
+        padding: 0 40px;
+    }
+    .map__title { 
+        padding: 0 40px;
+    }
+    .search__title {
+        padding: 0 40px;
+    }
+}

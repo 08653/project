@@ -60,3 +60,14 @@ rgba(0,0,0,0.2);
 .reviews__item:hover{
     transform: scale(1.1);
 }
+
+.reviews__star{
+    color:#eccb10
+}
+ 
+.search__form{
+    display: flex;
+    padding: 0 30px;
+    column-gap: 40px;
+    list-style: none;
+}

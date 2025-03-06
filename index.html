@@ -29,18 +29,21 @@
         <section class="search">
             <h2 class="search__title">Найдите свой следующий отдых</h2>
             <form class="search__form">
-                <label class="search__label" for="destination">Куда хотите поехать?</label>
-                <select name="city" id="city-select">
-                    <option value="">Выберите город</option>
-                    <option value="petersburg">Санкт-Петербург</option>
-                    <option value="samara">Самара</option>
-                    <option value="perm">Пермь</option>
-                    <option value="novosibirsk">Новосибирск</option>
-                </select>
-                <label class="search__label" for="date">Дата поездки</label>
-                <input class="search__input" type="date" id="date">
+                <div class="search__form-section">
+                    <label class="search__label" for="destination">Куда хотите поехать?</label>
+                    <select name="city" id="city-select">
+                        <option value="">Выберите город</option>
+                        <option value="petersburg">Санкт-Петербург</option>
+                        <option value="samara">Самара</option>
+                        <option value="perm">Пермь</option>
+                        <option value="novosibirsk">Новосибирск</option>
+                    </select>
+                </div>
+                <div class="search__form-section">
+                    <label class="search__label" for="date">Дата поездки</label>
+                    <input class="search__input" type="date" id="date">
+                </div>
 
-                <label class="search__label" for="passengers">Количество пассажиров</label>
                 <input class="search__input" type="number" id="passengers" placeholder="Количество пассажиров">
 
                 <button class="search__button button" type="button">Поиск</button>
@@ -129,29 +132,49 @@
         </section>
 
         <section class="hotels">
-            <img class="hotels__image" src="images/hotel_room1.jpg" alt="Отели" width="300">
-            <img class="hotels__image" src="images/hotel_room2.jpg" alt="Отели" width="300">
-            <img class="hotels__image" src="images/hotel_room3.jpg" alt="Отели" width="300">
-            <img class="hotels__image" src="images/hotel_room.jpg" alt="Отели" width="300">
+            <img class="hotels__image" src="images/hotel_room1.jpg" alt="Отели" width="400">
+            <img class="hotels__image" src="images/hotel_room2.jpg" alt="Отели" width="400">
+            <img class="hotels__image" src="images/hotel_room3.jpg" alt="Отели" width="400">
+            <img class="hotels__image" src="images/hotel_room.jpg" alt="Отели" width="400">
         </section>
         <section class="reviews">
             <h2 class="reviews__title">Отзывы</h2>
             <ul class="reviews__list">
                 <li class="reviews__item">
                     <h3 class="reviews__subtitle">Очень хороший отель</h3>
-                    <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-star-ios7-16.png">
-                    <img src="/images/star.png" alt="Звезда" width="50">
-                    <p class="reviews__text">Рекомендую этот отель всем, кто ищет комфорт и разнообразие в своём отпуске. Очень понравился сервис, доброжелательный персонал. Красивый вид из окна. В номере чисто, светло и уютно. Есть кондиционер, телевизор... и много всего необходимого для проживания. Ресторан с разнообразной кухней, вкусные завтраки. Всё понравилось. </p>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <p class="reviews__text">Рекомендую этот отель всем, кто ищет комфорт и разнообразие в своём
+                        отпуске. Очень понравился сервис, доброжелательный персонал. Красивый вид из окна. В номере
+                        чисто, светло и уютно. Есть кондиционер, телевизор и много всего необходимого для проживания.
+                        Ресторан с разнообразной кухней, вкусные завтраки.</p>
                 </li>
                 <li class="reviews__item">
                     <h3 class="reviews__subtitle">Очень хороший отель</h3>
-                    <img src="" alt="">
-                    <p class="reviews__text">Заемчательный отель! Чисто, уютно и красиво. Удобное расположение, хороший сервис. Ресторан на первом этаже с очень хорошей кухней, есть возможность заказать в номер. Вежливый и отзывчивый персонал. В номерах есть всё необходимое. Вид из окна шикарный. Кроме основных услуг, есть спа-услуги, спортзал и терраса.</p>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <p class="reviews__text">Замечательный отель! Удобное расположение, хороший сервис. Ресторан на
+                        первом этаже с очень хорошей кухней, есть возможность заказать в номер. Вежливый и отзывчивый
+                        персонал. В номерах есть всё необходимое. Вид из окна шикарный. Кроме основных услуг, есть
+                        спа-услуги, спортзал и терраса.</p>
                 </li>
                 <li class="reviews__item">
                     <h3 class="reviews__subtitle">Очень хороший отель</h3>
-                    <img src="" alt="">
-                    <p class="reviews__text">Один из самых интересных отелей. Большой красивый холл, где играла живая музыка. Было приятно расслабиться вечером и слушать красивую музыку. Отдельно выделю завтраки, а точнее за возможность сделать себе самому свежевыжатый сок из апельсинов. Побывал во многих отелях, но такую опцию увидел впервые. Впечатления остались самые наилучшие! Буду рекомендовать этот отель своим друзьям.  </p>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <span class="reviews__star">&#9733;</span>
+                    <p class="reviews__text">Один из самых интересных отелей. Большой красивый холл, где играла живая
+                        музыка. Было приятно расслабиться вечером и слушать красивую музыку. Отдельно выделю завтраки, а
+                        точнее за возможность сделать себе самому свежевыжатый сок из апельсинов. Побывал во многих
+                        отелях, но такую опцию увидел впервые. Впечатления остались самые наилучшие! Буду рекомендовать
+                        этот отель своим друзьям. </p>
                 </li>
             </ul>
         </section>

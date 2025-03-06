@@ -1,13 +1,15 @@
 .header{
     display: flex;
     /* background-color: #9bcc95; */
-
+    gap: 5px;
+    padding: 0 40px;
 }
 .menu {
     display: flex;
-    column-gap: 40px;
     list-style: none;
-
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
 }
 .menu__link {
     text-decoration: none;

@@ -189,7 +189,19 @@
             <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
         </ul>
     </footer>
-<script src="script/script.js"></script>
+    <div class="popup" hidden>
+            <form class="popup__form">
+                <h2>Регистрация</h2>
+                <input type="name" name="name" placeholder="Имя" required>
+                <input type="surname" name="surname" placeholder="Фамилия" required>
+                <input type="tel" name="phone" placeholder="Номер телефона" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <input type="password" name="confirm__password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+                <button type="button">Отмена</button>
+            </form>
+    </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

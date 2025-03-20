@@ -1,4 +1,4 @@
 'use strict'
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Страница загружается1');
+    console.log('Скрипт отработал корректно')
 });

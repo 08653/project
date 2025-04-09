@@ -1,5 +1,5 @@
-'use strict'
-document.addEventListener('DOMContentLoaded', () => {
+"use strict";
+document.addEventListener("DOMContentLoaded", () => {
     // * 1. Начало.
     // * 2. Находим кнопку входа/регистрации и присваиваем переменной.
     // * 3. При клике на кнопку входа/регистрации форма становится видимой:

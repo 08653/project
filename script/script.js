@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // *        3.1.1. Форма открывается.
     // *    3.2. Нет: продолжаем.
     // * 4. Конец
-    
-    console.log('Скрипт отработал корректно')
+
+    const intensiveImg = document.querySelector(".menu__item");
+    intensiveImg.addEventListener('mouseenter', () => {
+        console.log("Мышка наведена на кнопку, показываем форму");
+    });
+
 });

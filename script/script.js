@@ -63,27 +63,69 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     };
-//3.4 Формирование массива из частей заголовков
-const TourContainer = document.querySelector(".inspiration");
+    //3.4 Формирование массива из частей заголовков
+    const TourContainer = document.querySelector(".inspiration");
 
-//  проверяем существует ли элемент TrenersContainer, если он существует то переходим далее
+    //  проверяем существует ли элемент TrenersContainer, если он существует то переходим далее
     if (TourContainer) {
-//далее создаем массив dataTitleTreners, который содержит строки с именами тренеров.(здесь уже пишем те значения, которые надо подставить вместо слова Тренер 1, Тренер 2 и т.д)
+        //далее создаем массив dataTitleTreners, который содержит строки с именами тренеров.(здесь уже пишем те значения, которые надо подставить вместо слова Тренер 1, Тренер 2 и т.д)
         const dataTitleTour = [
             "Экстремальные путешествия",
             "Семейный отдых",
             "Романтические поездки"
         ];
 
-//Объявляем переменную titleTreners и сохраняем в нее все элементы на странице с классом treners__subtitle (где должны стоять имена тренеров)
+        //Объявляем переменную titleTreners и сохраняем в нее все элементы на странице с классом treners__subtitle (где должны стоять имена тренеров)
         const titleTour = TourContainer.querySelectorAll(".inspiration__subtitle");
 
-// Проходим по каждому элементу массива titleTreners с помощью цикла forEach. Внутри функции 2 переменные: item – текущий заголовок, а index — его индекс в массиве.
-titleTour.forEach((item, index) => {
+        // Проходим по каждому элементу массива titleTreners с помощью цикла forEach. Внутри функции 2 переменные: item – текущий заголовок, а index — его индекс в массиве.
+        titleTour.forEach((item, index) => {
 
-//здесь обновляем значение текущего заголовка (textContent) на новое значение из массива dataTitleCards, используя индекс текущего заголовка.
+            //здесь обновляем значение текущего заголовка (textContent) на новое значение из массива dataTitleCards, используя индекс текущего заголовка.
             item.textContent = dataTitleTour[index];
-           });
-    }
+        });
+    };
+    //3.5 Динамический вывод карточек
+    const cardsInsriration = document.querySelector('.inspiration');
+    if (cardsInsriration) {
+        const inspirationItem = cardsInsriration.querySelector('.inspiration__wrapper');
 
+        const cardsInspitationData = {
+            Inspiration1: {
+                level: 'Экстремальные путешествия',
+                description: 'Специализированные туры для искателей острых ощущений',
+                image: 'images/extreme.jpg',
+                button: 'Узнать больше'
+            },
+            Inspiration2: {
+                level: 'Семейный отдых',
+                description: 'Лучшие места для отдыха с детьми',
+                image: 'images/family.jpg',
+                button: 'Узнать больше'
+            },
+            Inspiration3: {
+                level: 'Романтические поездки',
+                description: 'Незабываемые моменты для влюбленных',
+                image: 'images/romantic.jpg',
+                button: 'Узнать больше'
+            }
+        }
+        const createCard = (level, description, image, button) => {
+            const card = `
+            <article class="inspiration__item">
+                    <h3 class="inspiration__subtitle">${level}</h3>
+                    <p class="inspiration__description">${description}</p>
+                    <img class="inspiration__image" src="${image}" alt="Экстремальные путешествия"
+                        width="600">
+                    <button class="inspiration__button button">${button}</button>
+                </article>
+                `;
+            return card;
+        }
+        for (const cardKey in cardsInspitationData) {
+            const card = cardsInspitationData[cardKey];
+            const cardElement = createCard(card.level, card.description, card.image, card.button);
+            inspirationItem.insertAdjacentHTML('beforeend', cardElement);
+        }
+    }
 });

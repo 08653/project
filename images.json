@@ -1,0 +1,27 @@
+[
+    {
+        "imageUrl": [
+            "img/content_1.jpg",
+            "img/content_2.jpg"
+        ],
+        "imageAlt": "Экстремальные путешествия",
+        "imageWidth": 600
+    },
+    {
+        "imageUrl": [
+            "img/content_3.jpg",
+            "img/extreme_1.webp"
+
+        ],
+        "imageAlt": "Экстремальные путешествия",
+        "imageWidth": 600
+    },
+    {
+        "imageUrl": [
+            "img/content_1.jpg",
+            "img/content_2.jpg"
+        ],
+        "imageAlt": "Экстремальные путешествия",
+        "imageWidth": 600
+    }
+]

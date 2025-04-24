@@ -10,92 +10,102 @@
 </head>
 
 <body>
-    <header class="header container">
-        <img class="header__logo" src="images/logo.jpg" alt="Логотип сайта" width="100" height="100">
-        <h1 class="header__title">Поиск путешествий</h1>
-        <nav class="header__menu">
-            <ul class="menu">
-                <li class="menu__item"><a class="menu__link" href="#">Поиск</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Маршруты</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-                <li class="menu__item"><button class="menu__link menu__button" href="#">Вход/Регистрация</button></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot1"></span>
+            <span class="dot2"></span>
+            <span class="dot3"></span>
+        </div>
+    </div>
 
-    <main class="main container">
-        <section class="search">
-            <h2 class="search__title">Найдите свой следующий отдых</h2>
-            <form class="search__form">
-                <div class="search__form-section">
-                    <label class="search__label" for="destination">Куда хотите поехать?</label>
-                    <select name="city" id="city-select">
-                        <option value="">Выберите город</option>
-                        <option value="petersburg">Санкт-Петербург</option>
-                        <option value="samara">Самара</option>
-                        <option value="perm">Пермь</option>
-                        <option value="novosibirsk">Новосибирск</option>
+    <div class="content">
+        <header class="header container">
+            <img class="header__logo" src="images/logo.jpg" alt="Логотип сайта" width="100" height="100">
+            <h1 class="header__title">Поиск путешествий</h1>
+            <nav class="header__menu">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="#">Поиск</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Маршруты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                    <li class="menu__item"><button class="menu__link menu__button" href="#">Вход/Регистрация</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main container">
+            <section class="search">
+                <h2 class="search__title">Найдите свой следующий отдых</h2>
+                <form class="search__form">
+                    <div class="search__form-section">
+                        <label class="search__label" for="destination">Куда хотите поехать?</label>
+                        <select name="city" id="city-select">
+                            <option value="">Выберите город</option>
+                            <option value="petersburg">Санкт-Петербург</option>
+                            <option value="samara">Самара</option>
+                            <option value="perm">Пермь</option>
+                            <option value="novosibirsk">Новосибирск</option>
+                        </select>
+                    </div>
+                    <div class="search__form-section">
+                        <label class="search__label" for="date">Дата поездки</label>
+                        <input class="search__input" type="date" id="date">
+                    </div>
+
+                    <input class="search__input" type="number" id="passengers" placeholder="Количество пассажиров">
+
+                    <button class="search__button button" type="button">Поиск</button>
+                </form>
+            </section>
+
+            <section class="map">
+                <h2 class="map__title">Интерактивная карта</h2>
+                <div class="map__container">
+                    <iframe class="map__iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1343.0298470153464!2d47.857713366843946!3d56.63303586188808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4159eb46f08d06d9%3A0x19a8bc30ab90eca0!2z0YPQuy4g0JzQsNGI0LjQvdC-0YHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQmdC-0YjQutCw0YAt0J7Qu9CwLCDQoNC10YHQvy4g0JzQsNGA0LjQuSDQrdC7LCA0MjQwMDM!5e0!3m2!1sru!2sru!4v1739379134121!5m2!1sru!2sru"
+                        width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0,"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+
+            <section class="filters">
+                <h2 class="filters__title">Фильтры результатов</h2>
+                <form class="filters__form">
+                    <label class="filters__label" for="price-range">Цена:</label>
+                    <input class="filters__input" type="range" id="price-range" min="0" max="100000" step="1000">
+
+                    <select class="filters__select">
+                        <option value="all">Все</option>
+                        <option value="high">5 звёзд</option>
+                        <option value="high">4 звезды и выше</option>
+                        <option value="low">3 звезды и ниже</option>
                     </select>
-                </div>
-                <div class="search__form-section">
-                    <label class="search__label" for="date">Дата поездки</label>
-                    <input class="search__input" type="date" id="date">
-                </div>
 
-                <input class="search__input" type="number" id="passengers" placeholder="Количество пассажиров">
+                    <label class="filters__label" for="accommodation-type">Тип размещения:</label>
+                    <select class="filters__select" id="accommodation-type">
+                        <option value="all">Все</option>
+                        <option value="hotel">Отель</option>
+                        <option value="hostel">Хостел</option>
+                        <option value="apartment">Апартаменты</option>
+                    </select>
 
-                <button class="search__button button" type="button">Поиск</button>
-            </form>
-        </section>
+                    <button class="filters__button button" type="button">Применить фильтры</button>
+                </form>
+            </section>
 
-        <section class="map">
-            <h2 class="map__title">Интерактивная карта</h2>
-            <div class="map__container">
-                <iframe class="map__iframe"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1343.0298470153464!2d47.857713366843946!3d56.63303586188808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4159eb46f08d06d9%3A0x19a8bc30ab90eca0!2z0YPQuy4g0JzQsNGI0LjQvdC-0YHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQmdC-0YjQutCw0YAt0J7Qu9CwLCDQoNC10YHQvy4g0JzQsNGA0LjQuSDQrdC7LCA0MjQwMDM!5e0!3m2!1sru!2sru!4v1739379134121!5m2!1sru!2sru"
-                    width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0,"
-                    allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+            <section class="profile">
+                <h2 class="profile__title">Личный кабинет</h2>
+                <p class="profile__info">Ваши избранные варианты, история поиска и планы маршрутов</p>
+                <button class="profile__button button">Перейти в кабинет</button>
+            </section>
 
-        <section class="filters">
-            <h2 class="filters__title">Фильтры результатов</h2>
-            <form class="filters__form">
-                <label class="filters__label" for="price-range">Цена:</label>
-                <input class="filters__input" type="range" id="price-range" min="0" max="100000" step="1000">
-
-                <select class="filters__select">
-                    <option value="all">Все</option>
-                    <option value="high">5 звёзд</option>
-                    <option value="high">4 звезды и выше</option>
-                    <option value="low">3 звезды и ниже</option>
-                </select>
-
-                <label class="filters__label" for="accommodation-type">Тип размещения:</label>
-                <select class="filters__select" id="accommodation-type">
-                    <option value="all">Все</option>
-                    <option value="hotel">Отель</option>
-                    <option value="hostel">Хостел</option>
-                    <option value="apartment">Апартаменты</option>
-                </select>
-
-                <button class="filters__button button" type="button">Применить фильтры</button>
-            </form>
-        </section>
-
-        <section class="profile">
-            <h2 class="profile__title">Личный кабинет</h2>
-            <p class="profile__info">Ваши избранные варианты, история поиска и планы маршрутов</p>
-            <button class="profile__button button">Перейти в кабинет</button>
-        </section>
-
-        <section class="inspiration">
-            <h2 class="inspiration__title">Вдохновение для путешествий</h2>
-            <div class="inspiration__wrapper">
-                <!-- <article class="inspiration__item">
+            <section class="inspiration">
+                <h2 class="inspiration__title">Вдохновение для путешествий</h2>
+                <div class="inspiration__wrapper">
+                    <!-- <article class="inspiration__item">
                     <h3 class="inspiration__subtitle">Тур 1</h3>
                     <p class="inspiration__description">Специализированные туры для искателей острых ощущений</p>
                     <img class="inspiration__image" src="images/extreme.jpg" alt="Экстремальные путешествия"
@@ -114,129 +124,130 @@
                     <img class="inspiration__image" src="images/romantic.jpg" alt="Романтические поездки" width="600">
                     <button class="inspiration__button button">Узнать больше</button>
                 </article> -->
+                </div>
+            </section>
+
+            <section class="offers">
+                <h2 class="offers__title">Лучшие предложения</h2>
+                <p class="offers__info">Актуальные акции и скидки на авиабилеты и отели</p>
+                <div class="offers__item">
+                    <h3 class="offers__subtitle">Скидка 20% на все авиабилеты!</h3>
+                    <button class="offers__button button">Забронировать сейчас</button>
+                </div>
+                <div class="offers__item">
+                    <h3 class="offers__subtitle">Специальные предложения на отели</h3>
+                    <button class="offers__button button">Посмотреть предложения</button>
+                </div>
+            </section>
+
+            <section class="hotels">
+                <img class="hotels__image" src="images/hotel_room1.jpg" alt="Отели" width="400">
+                <img class="hotels__image" src="images/hotel_room2.jpg" alt="Отели" width="400">
+                <img class="hotels__image" src="images/hotel_room3.jpg" alt="Отели" width="400">
+                <img class="hotels__image" src="images/hotel_room.jpg" alt="Отели" width="400">
+            </section>
+            <section class="reviews">
+                <h2 class="reviews__title">Отзывы</h2>
+                <div class="reviews__wrap">
+                    <button class="reviews__left">
+                        <img src="images/left.png" alt="кнопка влево" width="50" height="50">
+                    </button>
+
+                    <ul class="reviews__list">
+                        <li class="reviews__item">
+                            <h3 class="reviews__subtitle">Замечательный отель</h3>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <p class="reviews__text">Рекомендую этот отель всем, кто ищет комфорт и разнообразие в своём
+                                отпуске. Очень понравился сервис, доброжелательный персонал. Красивый вид из окна. В
+                                номере
+                                чисто, светло и уютно. Есть кондиционер, телевизор и много всего необходимого для
+                                проживания.
+                                Ресторан с разнообразной кухней, вкусные завтраки.</p>
+                        </li>
+                        <li class="reviews__item">
+                            <h3 class="reviews__subtitle">Вернёмся сюда снова!</h3>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <p class="reviews__text">Замечательный отель! Удобное расположение, хороший сервис. Ресторан
+                                на
+                                первом этаже с очень хорошей кухней, есть возможность заказать в номер. Вежливый и
+                                отзывчивый
+                                персонал. В номерах есть всё необходимое. Вид из окна шикарный. Кроме основных услуг,
+                                есть
+                                спа-услуги, спортзал и терраса.</p>
+                        </li>
+                        <li class="reviews__item">
+                            <h3 class="reviews__subtitle">Идеальное место для отдыха!</h3>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <p class="reviews__text">Один из самых интересных отелей. Большой красивый холл, где играла
+                                живая
+                                музыка. Было приятно расслабиться вечером и слушать красивую музыку. Отдельно выделю
+                                завтраки, а
+                                точнее за возможность сделать себе самому свежевыжатый сок из апельсинов. Побывал во
+                                многих
+                                отелях, но такую опцию увидел впервые. Впечатления остались самые наилучшие!</p>
+                        </li>
+                        <li class="reviews__item">
+                            <h3 class="reviews__subtitle">Очень хороший отель</h3>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <span class="reviews__star">&#9733;</span>
+                            <p class="reviews__text">Расположение удобное. Номера просторные и светлые. Всё необходимое
+                                для
+                                проживания есть. В ресторане отеля отличная кухня, большой выбор блюд на любой вкус.
+                                Персонал очень приветливый и отзывчивый. Все просьбы выполнялись быстро и чётко.
+                                Рекомендую!
+                            </p>
+                        </li>
+                    </ul>
+
+                    <button class="reviews__right">
+                        <img class="reviews__img" src="images/left.png" alt="кнопка влево" width="50" height="50">
+
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer container">
+            <p class="footer__text">2025 Путешествия. Все права защищены</p>
+            <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Карта сайта</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+            </ul>
+        </footer>
+        <div class="dialog" hidden>
+            <div class="popup">
+                <form class="popup__form">
+                    <h2>Регистрация</h2>
+                    <input type="name" name="name" placeholder="Имя" required>
+                    <input type="surname" name="surname" placeholder="Фамилия" required>
+                    <input type="tel" name="phone" placeholder="Номер телефона" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <input type="password" name="confirm__password" placeholder="Подтвердите пароль" required>
+                    <button type="submit">Зарегистрироваться</button>
+                    <button class="popup__close" type="button">Отмена</button>
+                </form>
             </div>
-        </section>
 
-        <section class="offers">
-            <h2 class="offers__title">Лучшие предложения</h2>
-            <p class="offers__info">Актуальные акции и скидки на авиабилеты и отели</p>
-            <div class="offers__item">
-                <h3 class="offers__subtitle">Скидка 20% на все авиабилеты!</h3>
-                <button class="offers__button button">Забронировать сейчас</button>
-            </div>
-            <div class="offers__item">
-                <h3 class="offers__subtitle">Специальные предложения на отели</h3>
-                <button class="offers__button button">Посмотреть предложения</button>
-            </div>
-        </section>
-
-        <section class="hotels">
-            <img class="hotels__image" src="images/hotel_room1.jpg" alt="Отели" width="400">
-            <img class="hotels__image" src="images/hotel_room2.jpg" alt="Отели" width="400">
-            <img class="hotels__image" src="images/hotel_room3.jpg" alt="Отели" width="400">
-            <img class="hotels__image" src="images/hotel_room.jpg" alt="Отели" width="400">
-        </section>
-        <section class="reviews">
-            <h2 class="reviews__title">Отзывы</h2>
-            <div class="reviews__wrap">
-                <button class="reviews__left">
-                    <img src="images/left.png" alt="кнопка влево" width="50" height="50">
-                </button>
-
-                <ul class="reviews__list">
-                    <li class="reviews__item">
-                        <h3 class="reviews__subtitle">Замечательный отель</h3>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <p class="reviews__text">Рекомендую этот отель всем, кто ищет комфорт и разнообразие в своём
-                            отпуске. Очень понравился сервис, доброжелательный персонал. Красивый вид из окна. В номере
-                            чисто, светло и уютно. Есть кондиционер, телевизор и много всего необходимого для
-                            проживания.
-                            Ресторан с разнообразной кухней, вкусные завтраки.</p>
-                    </li>
-                    <li class="reviews__item">
-                        <h3 class="reviews__subtitle">Вернёмся сюда снова!</h3>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <p class="reviews__text">Замечательный отель! Удобное расположение, хороший сервис. Ресторан на
-                            первом этаже с очень хорошей кухней, есть возможность заказать в номер. Вежливый и
-                            отзывчивый
-                            персонал. В номерах есть всё необходимое. Вид из окна шикарный. Кроме основных услуг, есть
-                            спа-услуги, спортзал и терраса.</p>
-                    </li>
-                    <li class="reviews__item">
-                        <h3 class="reviews__subtitle">Идеальное место для отдыха!</h3>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <p class="reviews__text">Один из самых интересных отелей. Большой красивый холл, где играла
-                            живая
-                            музыка. Было приятно расслабиться вечером и слушать красивую музыку. Отдельно выделю
-                            завтраки, а
-                            точнее за возможность сделать себе самому свежевыжатый сок из апельсинов. Побывал во многих
-                            отелях, но такую опцию увидел впервые. Впечатления остались самые наилучшие!</p>
-                    </li>
-                    <li class="reviews__item">
-                        <h3 class="reviews__subtitle">Очень хороший отель</h3>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <span class="reviews__star">&#9733;</span>
-                        <p class="reviews__text">Расположение удобное. Номера просторные и светлые. Всё необходимое для
-                            проживания есть. В ресторане отеля отличная кухня, большой выбор блюд на любой вкус.
-                            Персонал очень приветливый и отзывчивый. Все просьбы выполнялись быстро и чётко. Рекомендую!
-                        </p>
-                    </li>
-                </ul>
-
-                <button class="reviews__right">
-                    <img class="reviews__img" src="images/left.png" alt="кнопка влево" width="50" height="50">
-
-                </button>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer container">
-        <p class="footer__text">2025 Путешествия. Все права защищены</p>
-        <ul class="footer__list">
-            <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Карта сайта</a></li>
-            <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
-        </ul>
-    </footer>
-    <div class="dialog" hidden>
-        <div class="popup">
-            <form class="popup__form">
-                <h2>Регистрация</h2>
-                <input type="name" name="name" placeholder="Имя" required>
-                <input type="surname" name="surname" placeholder="Фамилия" required>
-                <input type="tel" name="phone" placeholder="Номер телефона" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <input type="password" name="confirm__password" placeholder="Подтвердите пароль" required>
-                <button type="submit">Зарегистрироваться</button>
-                <button class="popup__close" type="button">Отмена</button>
-            </form>
         </div>
     </div>
 
     <script src="script/script.js"></script>
 
-    <section class="images">
-        <h2 class="images__title">Изображения</h2>
-        <div class="images__wrapper">
-            <!--Здесь будет создаваться код с использованием JSON. -->
-        </div>
-    </section>
 </body>
 
 </html>

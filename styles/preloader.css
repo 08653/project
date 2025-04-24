@@ -1,0 +1,44 @@
+/* Скрываем контент до загрузки */
+.content {
+    display: none;
+}
+
+.preloader {
+    padding-top: 25%; /* Отступ сверху */
+    background: #fefefb; /* задаем фон при загрузке */
+    transition: opacity 0.5s ease; /* Плавный переход для изменения прозрачности */
+    text-align: center;/* центрируем текст */
+    color: #000000;
+}
+
+.loader span {
+  display: inline-block;/* располагаем элементы в строку */
+  width: 15px;/* Ширина кругов */
+  height: 15px;/* Высота кругов */
+  border-radius: 100%;/* задаем круг */
+  background-color: #2f812c;/* Цвет кругов */
+  margin: 35px 5px;/* Отступы вокруг кругов */
+  opacity: 0;
+}
+.dot1 {
+    animation: opacitychange 1.5s ease-in-out infinite;/* анимация для первой точки */
+}
+
+.dot2{
+    animation: opacitychange 1.5s ease-in-out 0.33s infinite;;/*анимация для второй точки с задержкой*/
+}
+
+.dot3 {
+    animation: opacitychange 1.5s ease-in-out 0.66s infinite;;/* анимация для третьей точки с задержкой */
+}
+
+/* Анимация opacitychange: */
+@keyframes opacitychange{
+    0%, 100%{
+      opacity: 0;
+    }
+  
+    60%{
+      opacity: 1;
+    }
+  }

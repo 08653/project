@@ -86,46 +86,103 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
     //3.5 Динамический вывод карточек
+    // const cardsInsriration = document.querySelector('.inspiration');
+    // if (cardsInsriration) {
+    //     const inspirationItem = cardsInsriration.querySelector('.inspiration__wrapper');
+
+    //     const cardsInspitationData = {
+    //         Inspiration1: {
+    //             level: 'Экстремальные путешествия',
+    //             description: 'Специализированные туры для искателей острых ощущений',
+    //             image: 'images/extreme.jpg',
+    //             button: 'Узнать больше'
+    //         },
+    //         Inspiration2: {
+    //             level: 'Семейный отдых',
+    //             description: 'Лучшие места для отдыха с детьми',
+    //             image: 'images/family.jpg',
+    //             button: 'Узнать больше'
+    //         },
+    //         Inspiration3: {
+    //             level: 'Романтические поездки',
+    //             description: 'Незабываемые моменты для влюбленных',
+    //             image: 'images/romantic.jpg',
+    //             button: 'Узнать больше'
+    //         }
+    //     }
+    //     const createCard = (level, description, image, button) => {
+    //         const card = `
+    //         <article class="inspiration__item">
+    //                 <h3 class="inspiration__subtitle">${level}</h3>
+    //                 <p class="inspiration__description">${description}</p>
+    //                 <img class="inspiration__image" src="${image}" alt="Экстремальные путешествия"
+    //                     width="600">
+    //                 <button class="inspiration__button button">${button}</button>
+    //             </article>
+    //             `;
+    //         return card;
+    //     }
+    //     for (const cardKey in cardsInspitationData) {
+    //         const card = cardsInspitationData[cardKey];
+    //         const cardElement = createCard(card.level, card.description, card.image, card.button);
+    //         inspirationItem.insertAdjacentHTML('beforeend', cardElement);
+    //     }
+    // }
+    //3.6 Preloader
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
+    if (preloader && content) {
+        setTimeout(() => {
+            // Скрываем прелоадер
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
+
+            // Показываем контент
+            content.style.display = "block";
+
+            // Удаляем элемент из DOM
+            preloader.remove();
+        }, 3000); // Задержка 3 секунды
+    }
+
+    //3.6 Вывод с помощью json.
     const cardsInsriration = document.querySelector('.inspiration');
     if (cardsInsriration) {
         const inspirationItem = cardsInsriration.querySelector('.inspiration__wrapper');
-
-        const cardsInspitationData = {
-            Inspiration1: {
-                level: 'Экстремальные путешествия',
-                description: 'Специализированные туры для искателей острых ощущений',
-                image: 'images/extreme.jpg',
-                button: 'Узнать больше'
-            },
-            Inspiration2: {
-                level: 'Семейный отдых',
-                description: 'Лучшие места для отдыха с детьми',
-                image: 'images/family.jpg',
-                button: 'Узнать больше'
-            },
-            Inspiration3: {
-                level: 'Романтические поездки',
-                description: 'Незабываемые моменты для влюбленных',
-                image: 'images/romantic.jpg',
-                button: 'Узнать больше'
-            }
-        }
+        const apiUrl = "data.json";
         const createCard = (level, description, image, button) => {
             const card = `
-            <article class="inspiration__item">
-                    <h3 class="inspiration__subtitle">${level}</h3>
-                    <p class="inspiration__description">${description}</p>
-                    <img class="inspiration__image" src="${image}" alt="Экстремальные путешествия"
-                        width="600">
-                    <button class="inspiration__button button">${button}</button>
-                </article>
-                `;
+                        <article class="inspiration__item">
+                                <h3 class="inspiration__subtitle">${level}</h3>
+                                <p class="inspiration__description">${description}</p>
+                                <img class="inspiration__image" src="${image}" alt="Экстремальные путешествия"
+                                    width="600">
+                                <button class="inspiration__button button">${button}</button>
+                            </article>
+                            `;
             return card;
         }
-        for (const cardKey in cardsInspitationData) {
-            const card = cardsInspitationData[cardKey];
-            const cardElement = createCard(card.level, card.description, card.image, card.button);
-            inspirationItem.insertAdjacentHTML('beforeend', cardElement);
-        }
+        // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data); // Данные
+                console.log(typeof data); // Тип полученных данных
+
+                data.forEach((item) => {
+                    const cardElement = createCard(
+                        item.level,
+                        item.description,
+                        item.image,
+                        item.button
+                    );
+                    inspirationItem.insertAdjacentHTML("beforeend", cardElement);
+
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            });
     }
+
 });

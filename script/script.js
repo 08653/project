@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
             preloader.remove();
         }, 3000); // Задержка 3 секунды
     }
-
     //3.6 Вывод с помощью json.
     const cardsInsriration = document.querySelector('.inspiration');
     if (cardsInsriration) {
@@ -184,5 +183,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error('Ошибка при загрузке данных:', error);
             });
     }
+    //3.7 Карусель (слайдер).
+    const slider1 = document.querySelector('.swiper');
+    if (slider1) {
+        const swiper = new Swiper(slider1, {
+            // Дополнительные параметры
+            slidesPerView: 4, // Количество слайдов на экране
+            spaceBetween: 30, // Расстояние между слайдами
+            loop: true,  // Зацикливание слайдов
 
+            // Пагинация
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Навигационные стрелки
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
 });

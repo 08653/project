@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт бронирования путешествий</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -127,6 +128,50 @@
                 </div>
             </section>
 
+            <section class="section card card--slider swiper">
+                <div class="card__list card__list--slider swiper-wrapper">
+                    <a class="card__item swiper-slide" href="#">
+                        <span class="card__icon">
+                            <img src="images/icon/menu.svg" alt="Иконка" width="22" height="24">
+                        </span>
+                        <h3 class="card__title">Заголовок 1</h3>
+                    </a>
+                    <a class="card__item swiper-slide" href="#">
+                        <span class="card__icon">
+                            <img src="images/icon/cook.svg" alt="Иконка" width="24" height="24">
+                        </span>
+                        <h3 class="card__title">Заголовок 2</h3>
+                    </a>
+                    <a class="card__item swiper-slide" href="#">
+                        <span class="card__icon">
+                            <img src="images/icon/chef.svg" alt="Иконка" width="24" height="23">
+                        </span>
+                        <h3 class="card__title">Заголовок 3</h3>
+                    </a>
+                    <a class="card__item swiper-slide" href="#">
+                        <span class="card__icon">
+                            <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
+                        </span>
+                        <h3 class="card__title">Заголовок 4</h3>
+                    </a>
+                    <a class="card__item swiper-slide" href="#">
+                        <span class="card__icon">
+                            <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
+                        </span>
+                        <h3 class="card__title">Заголовок 5</h3>
+                    </a>
+                    <a class="card__item swiper-slide" href="#">
+                        <span class="card__icon">
+                            <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
+                        </span>
+                        <h3 class="card__title">Заголовок 6</h3>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </section>
+
             <section class="offers">
                 <h2 class="offers__title">Лучшие предложения</h2>
                 <p class="offers__info">Актуальные акции и скидки на авиабилеты и отели</p>
@@ -245,7 +290,7 @@
 
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>
 
 </body>

@@ -152,3 +152,13 @@
 .reviews__star {
     color: #fce30a;
 }
+
+.swiper-wrapper {
+    padding: 0 60px;
+}
+.swiper-slide {
+    width: 300px;
+}
+.swiper{
+    width: 1070px;
+}

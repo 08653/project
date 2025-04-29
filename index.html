@@ -127,50 +127,25 @@
                 </article> -->
                 </div>
             </section>
-
-            <section class="section card card--slider swiper">
-                <div class="card__list card__list--slider swiper-wrapper">
-                    <a class="card__item swiper-slide" href="#">
-                        <span class="card__image">
-                            <img src="images/excursion.webp" alt="Экскурсия" width="152" height="236">
-                        </span>
-                        <h3 class="card__title">Заголовок 1</h3>
-                    </a>
-                    <a class="card__item swiper-slide" href="#">
-                        <span class="card__image">
-                            <img src="images/excursion_1.webp" alt="Иконка" width="24" height="24">
-                        </span>
-                        <h3 class="card__title">Заголовок 2</h3>
-                    </a>
-                    <a class="card__item swiper-slide" href="#">
-                        <span class="card__icon">
-                            <img src="images/icon/chef.svg" alt="Иконка" width="24" height="23">
-                        </span>
-                        <h3 class="card__title">Заголовок 3</h3>
-                    </a>
-                    <a class="card__item swiper-slide" href="#">
-                        <span class="card__icon">
-                            <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
-                        </span>
-                        <h3 class="card__title">Заголовок 4</h3>
-                    </a>
-                    <a class="card__item swiper-slide" href="#">
-                        <span class="card__icon">
-                            <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
-                        </span>
-                        <h3 class="card__title">Заголовок 5</h3>
-                    </a>
-                    <a class="card__item swiper-slide" href="#">
-                        <span class="card__icon">
-                            <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
-                        </span>
-                        <h3 class="card__title">Заголовок 6</h3>
-                    </a>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/excursion.webp" alt="Экскурсия" width="400" height="300">
+                    <h3 class="card__title">Заголовок 1</h3></div>
+                  <div class="swiper-slide">
+                    <img src="images/excursion_1.webp" alt="Экскурсия1" width="400" height="300">
+                    <h3 class="card__title">Заголовок 2</h3></div>
+                  <div class="swiper-slide">
+                    <img src="images/excursion_2.webp" alt="Экскурсия2" width="400" height="300">
+                    <h3 class="card__title">Заголовок 3</h3></div>
+                  <div class="swiper-slide">
+                    <img src="images/excursion_3.webp" alt="Экскурсия3" width="400" height="300">
+                    <h3 class="card__title">Заголовок 4</h3></div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </section>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+        </div>
 
             <section class="offers">
                 <h2 class="offers__title">Лучшие предложения</h2>
@@ -276,16 +251,17 @@
         </footer>
         <div class="dialog" hidden>
             <div class="popup">
-                <form class="popup__form">
+                <form class="popup__form" id="form">
                     <h2>Регистрация</h2>
-                    <input type="name" name="name" placeholder="Имя" required>
-                    <input type="surname" name="surname" placeholder="Фамилия" required>
-                    <input type="tel" name="phone" placeholder="Номер телефона" required>
-                    <input type="password" name="password" placeholder="Пароль" required>
+                    <input type="name" name="name" placeholder="Имя" required id="name">
+                    <input type="surname" name="surname" placeholder="Фамилия" required id="surname">
+                    <input type="tel" name="phone" placeholder="Номер телефона" required id="phone">
+                    <input type="password" name="password" placeholder="Пароль" required id="password">
                     <input type="password" name="confirm__password" placeholder="Подтвердите пароль" required>
                     <button type="submit">Зарегистрироваться</button>
                     <button class="popup__close" type="button">Отмена</button>
                 </form>
+                <p id="application-message" class="application__message"></p>
             </div>
 
         </div>

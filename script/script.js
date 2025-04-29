@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerButton = document.querySelector(".menu__button");
     const popupDialog = document.querySelector(".dialog");
 
-    if (headerButton && popupDialog)
+    if (headerButton && popupDialog){
 
         console.log("Существует кнопка и форма");
     headerButton.addEventListener("click", () => {
@@ -27,6 +27,47 @@ document.addEventListener("DOMContentLoaded", () => {
             popupDialog.setAttribute("hidden", true);
         });
     });
+
+    const formApplication = document.querySelector("#form"); 
+// Проверяем, существует ли элемент formApplication
+if (formApplication) {  
+// Добавляем обработчик события для отправки формы
+   formApplication.addEventListener("submit", (event) => {
+     event.preventDefault(); // Предотвращаем отправку формы
+    // Объявляем переменные "username", "tel","email",   и помещаем в нее элементы с id из формы
+     const name = formApplication.querySelector("#name").value;
+     const surname = formApplication.querySelector("#surname").value;
+     const tel = formApplication.querySelector("#phone").value;
+
+     // Объявляем переменную modalMessage и помещаем в нее элемент для отображения сообщений о статусе заявки
+const modalMessage = popupDialog.querySelector("#application-message");
+    
+      // Проверка длины имени пользователя
+      if (name.length < 3) {
+         modalMessage.textContent = "Имя пользователя должно содержать не менее 3 символов";
+         modalMessage.style.color = "red"; // Устанавливаем цвет сообщения об ошибке
+         return;
+      }
+    
+       // Проверка номера телефона
+      if (!/^\d{10,}$/.test(tel)) {
+          modalMessage.textContent = "Номер телефона должен содержать только цифры и быть не менее 10 символов";
+          modalMessage.style.color = "red"; // Устанавливаем цвет сообщения
+          return;
+      }
+    
+      // Здесь можно добавить отправку данных на сервер
+      modalMessage.textContent = "Заявка отправлена!";
+      modalMessage.style.color = "green"; // Устанавливаем цвет сообщения для успешной отправки
+    
+      // Записываем данные в localStorage
+      window.localStorage.setItem("name", name);
+      window.localStorage.setItem("surname", surname);
+      window.localStorage.setItem("phone", tel);
+});
+}
+
+}
     //3.4 Слайдер изображений
     let currentIndex = 0;
     const slider = document.querySelectorAll(".reviews__item");
@@ -188,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (slider1) {
         const swiper = new Swiper(slider1, {
             // Дополнительные параметры
-            slidesPerView: 4, // Количество слайдов на экране
+            slidesPerView: 2, // Количество слайдов на экране
             spaceBetween: 30, // Расстояние между слайдами
             loop: true,  // Зацикливание слайдов
 

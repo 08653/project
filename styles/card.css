@@ -57,7 +57,6 @@
 
 .card__title {
     margin-bottom: 16px;
-
     font-size: 24px;
     font-weight: 700;
     color: #25292d;
@@ -66,7 +65,6 @@
 .card__description {
     margin-top: 0;
     margin-bottom: 0;
-
     color: #4a525a;
 }
 
